@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_one/question.dart';
 
 void main() => runApp(AppState());
 
 class AppState extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<AppState> {
+// _ means making the class private
+class _MyAppState extends State<AppState> {
   var questionIndex = 0;
   void onButtonPressed() {
     print("Error Name");
@@ -27,7 +29,7 @@ class MyAppState extends State<AppState> {
             appBar: AppBar(title: Text("My First App")),
             body: Column(
               children: <Widget>[
-                Text(question[questionIndex]),
+                QusetionWifget(question[questionIndex]),
                 RaisedButton(
                     child: Text("Jadu"), onPressed: onButtonPressed),
                 RaisedButton(
